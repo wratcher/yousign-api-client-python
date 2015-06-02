@@ -1,0 +1,9 @@
+[client]
+
+username =
+password =
+apikey =
+
+environment = demo
+isEncryptedPassword = false
+
