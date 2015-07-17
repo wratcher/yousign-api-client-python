@@ -8,7 +8,7 @@ This client allows to use the Yousign Soap API through Python.
 You need to have a version of Python (2.6 or 2.7) running on your device, in order to execute the following programs.
 
 + Clone this repository:  
-    * git clone https://github.com/rapha777/yousign-api-client-python
+    * git clone https://github.com/Yousign/yousign-api-client-python.git
 + Cd into **yousign-api-client-python** and execute:  
     * python setup.py install
 
