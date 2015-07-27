@@ -1,3 +1,6 @@
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Yousign/yousign-api-client-python?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+
 # Python Client for Yousign API
 
 ## Description
