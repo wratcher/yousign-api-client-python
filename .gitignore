@@ -2,3 +2,4 @@ ysApi.egg-info
 .idea
 build
 dist
+config/config.ini

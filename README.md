@@ -16,7 +16,7 @@ You need to have a version of Python (2.6 or 2.7) running on your device, in ord
     * python setup.py install
 
 ## Configuration
-You can edit the file **'~/config/config.ini'** in order to enter your settings.  
+You can copy the file **'~/config/config.ini.dist'** in **'~/config/config.ini'** and change it to enter your settings. 
 Then set your configuration with these parameters:
 
     * login : Your login (email address)
