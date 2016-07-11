@@ -17,7 +17,7 @@ class ApiClient():
         return {"demo":'apidemo.yousign.fr:8181/',"prod":'api.yousign.fr:8181/'}
     @property
     def url_dict(self):
-        return {"demo":'https://demo.yousign.fr/',"prod":'https://api.yousign.fr/'}
+        return {"demo":'https://demo.yousign.fr/',"prod":'https://yousign.fr/'}
 
     @property
     def WSDL_AUTH_URL(self):
