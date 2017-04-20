@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 import hashlib
 import os
-from configparser import ConfigParser
+try:
+    from configparser import ConfigParser
+except ImportError:
+    from ConfigParser import RawConfigParser as ConfigParser
 import logging
 from suds.client import Client
 from suds.sax.element import Element
