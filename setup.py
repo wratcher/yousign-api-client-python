@@ -9,5 +9,5 @@ setuptools.setup(
     #packages=setuptools.find_packages(),
     # Project uses suds
     # installed or upgraded on the target machine
-    install_requires = ['suds>=0.4']
+    install_requires = ['suds-jurko>=0.4']
 )
