@@ -3,3 +3,5 @@ ysApi.egg-info
 build
 dist
 config/config.ini
+*.py[co]
+*.sw[po]

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import hashlib
 import os
-import ConfigParser
+from configparser import ConfigParser
 import logging
 from suds.client import Client
 from suds.sax.element import Element
@@ -33,7 +33,8 @@ class ApiClient():
     "Method used to hash(encrypt) the password"
     @staticmethod
     def hashPassword(password):
-         return hashlib.sha1(hashlib.sha1(password).hexdigest()+ hashlib.sha1(password).hexdigest()).hexdigest()
+        password = hashlib.sha1(password.encode('utf-8')).hexdigest().encode('utf-8')
+        return hashlib.sha1(password + password).hexdigest()
 
     """
     Method used to load user configuration (in order to establish a connection)from a file.
@@ -41,7 +42,7 @@ class ApiClient():
     User can choose to put (or no) an encrypted password.
     """
     def parseConf(self, pathParameters):
-        config = ConfigParser.RawConfigParser()
+        config = ConfigParser()
         config.read(pathParameters)
         self.username = config.get('client', 'username')
 
