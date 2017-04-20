@@ -15,11 +15,11 @@ if __name__ == "__main__":
     try:
         res = c.getListSign(count=1)
         if res == []:
-            print "Signature not yet created "
+            print("Signature not yet created ")
         idDemand = res[0]['cosignatureEvent']
         res = c.getInfosFromSignatureDemand(idDemand)
-        print " Details from the signature with the id : %d" %(idDemand)
-        print res
+        print(" Details from the signature with the id : %d" %(idDemand))
+        print(res)
     except suds.WebFault as detail:
-        print detail
+        print(detail)
 

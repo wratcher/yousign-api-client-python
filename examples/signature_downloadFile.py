@@ -18,7 +18,7 @@ if __name__ == "__main__":
     def id_generator(size=5, chars=  string.ascii_lowercase + string.digits):
         return ''.join(random.choice(chars) for _ in range(size))
 
-    print "Getting Signed file(s) ..."
+    print("Getting Signed file(s) ...")
 
     try :
         # For the last signature
@@ -40,10 +40,10 @@ if __name__ == "__main__":
         # Write contents associated to each file
         for el in fileName :
             pathFile= 'documents/'+id_generator()+'_'+fileName[fileName.index(el)]
-            print pathFile
+            print(pathFile)
             signedFile = open(pathFile, 'w')
             signedFile.write(base64.b64decode(file[fileName.index(el)]))
 
-            print 'Signed file saved in : '+os.getcwd()+'/'+pathFile
+            print('Signed file saved in : '+os.getcwd()+'/'+pathFile)
     except suds.WebFault as detail:
-        print detail
+        print(detail)

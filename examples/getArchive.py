@@ -30,8 +30,8 @@ if __name__ == "__main__":
         archFile = open(pathFile, 'w')
         archFile.write(base64.b64decode(content))
 
-        print 'Archive saved in : '+os.getcwd()+'/'+pathFile
-        print 'Response from Yousign API ...'
-        print res
+        print('Archive saved in : '+os.getcwd()+'/'+pathFile)
+        print('Response from Yousign API ...')
+        print(res)
     except suds.WebFault as detail:
-        print detail
+        print(detail)

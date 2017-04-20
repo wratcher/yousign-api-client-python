@@ -12,11 +12,11 @@ if __name__ == "__main__":
     #                     "environment")
 
 
-    print "Getting List ... "
+    print("Getting List ... ")
 
     # The last ten signatures for this example
     try:
         res = c.getListSign('', 0, count = 10)
-        print res
+        print(res)
     except suds.WebFault as detail:
-        print detail
+        print(detail)

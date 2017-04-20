@@ -13,14 +13,14 @@ if __name__ == "__main__":
 
 
     try:
-        print "Alerting the Signers ..."
+        print("Alerting the Signers ...")
 
         # For the last signature
         last = c.getListSign(count=1)
         idDemand = last[0]['cosignatureEvent']
 
         res = c.alertSigners(idDemand)
-        print res
+        print(res)
 
     except suds.WebFault as detail:
-        print detail
+        print(detail)

@@ -20,6 +20,6 @@ if __name__ == "__main__":
    #                     "apikey",
    #                     "environment")
     try :
-        print "Successful authentication"  if c.connect() else "Authentication failed"
+        print("Successful authentication"  if c.connect() else "Authentication failed")
     except suds.WebFault as detail:
-        print detail
+        print(detail)

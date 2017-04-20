@@ -50,12 +50,12 @@ if __name__ == "__main__":
 
     # Verify that each file is associated with its options.
     if len(lstFile)!=len(options):
-        print "Files and options numbers must be identical"
+        print("Files and options numbers must be identical")
 
     # Verify that each signer is associated with his signature options.
     for op in options:
         if len(op)!=len(listSignersInfos):
-            print "Make sure that all signers are associated with signature options  [Not fatal]"
+            print("Make sure that all signers are associated with signature options  [Not fatal]")
 
     # Associate each file to its options and its password if it exists.
     for i in range (len(lstFile)) :
@@ -85,13 +85,13 @@ if __name__ == "__main__":
             mail.append(el['mail'])
 
         # To display url associated with each email address (signers)
-        print "Access Links to documents to sign :"
+        print("Access Links to documents to sign :")
         for el in mail:
             ind = mail.index(el)
-            print "Link for the signer  "+el+" : "+c.url_iFrame+'public/ext/cosignature/'+token[ind]
+            print("Link for the signer  "+el+" : "+c.url_iFrame+'public/ext/cosignature/'+token[ind])
 
         # To display all information about the signatures
-        print "Response from Yousign API :"
-        print res
+        print("Response from Yousign API :")
+        print(res)
     except suds.WebFault as detail:
-        print detail
+        print(detail)

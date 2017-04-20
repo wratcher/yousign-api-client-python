@@ -13,14 +13,14 @@ if __name__ == "__main__":
 
 
     try:
-        print "Cancelling the Signature ... "
+        print("Cancelling the Signature ... ")
 
         # For the last signature
         last = c.getListSign(count=1)
         idDemand = last[0]['cosignatureEvent']
 
         res = c.cancelSignatureDemand(idDemand)
-        print res
+        print(res)
 
     except suds.WebFault as detail:
-        print detail
+        print(detail)
