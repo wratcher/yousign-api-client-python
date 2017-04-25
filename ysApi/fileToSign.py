@@ -9,7 +9,7 @@ class FileToSign(dict):
         f = dirName+os.path.basename(name)
         self["name"] = os.path.basename(f)
         with open(f, "rb") as test_file:
-            content = base64.b64encode(test_file.read())
+            content = base64.b64encode(test_file.read()).decode('ascii')
         self["content"] = content
         self["visibleOptions"] = visibleOptions
         self["pdfPassword"] = password

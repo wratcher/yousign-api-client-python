@@ -36,7 +36,7 @@ class ApiClient():
     "Method used to hash(encrypt) the password"
     @staticmethod
     def hashPassword(password):
-        password = hashlib.sha1(password.encode('utf-8')).hexdigest().encode('utf-8')
+        password = hashlib.sha1(password.encode('utf-8')).hexdigest().encode('ascii')
         return hashlib.sha1(password + password).hexdigest()
 
     """
